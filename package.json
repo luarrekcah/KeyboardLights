@@ -1,0 +1,30 @@
+{
+  "name": "keyboardlights",
+  "description": "Just an app for activate keyboard lights on OSX.",
+  "version": "0.0.1",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^35.1.2",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.6"
+  },
+  "build": {
+    "appId": "com.devluarsoftwares.keyboardlights",
+    "productName": "KeyboardLights",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "assets/icon.icns",
+      "target": "dmg"
+    },
+    "files": [
+      "**/*"
+    ],
+    "asar": true
+  }
+}
