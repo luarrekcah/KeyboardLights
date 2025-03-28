@@ -1,4 +1,4 @@
-const { app } = require('electron');
+const { app, dialog} = require('electron');
 const { exec } = require('child_process');
 const path = require('path');
 const AutoLaunch = require('auto-launch');
@@ -17,11 +17,12 @@ autoLauncher.isEnabled().then((isEnabled) => {
 });
 
 app.whenReady().then(() => {
-  const command = path.join(__dirname, 'setleds -caps +scroll ^num');
+  const binaryPath = path.join(process.resourcesPath, 'scrolllock_on');
 
-  exec(command, (error, stdout, stderr) => {
+  exec(binaryPath, (error, stdout, stderr) => {
     if (error) {
       console.error(`Error: ${error.message}`);
+      dialog.showErrorBox('Error while running command:', error.message);
       return;
     }
     if (stderr) {

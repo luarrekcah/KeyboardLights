@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "build:binary": "clang -framework IOKit -framework CoreFoundation ./binaries/scrolllock_on.c -o ./extraResources/scrolllock_on"
   },
   "devDependencies": {
     "electron": "^35.1.2",
@@ -25,6 +26,15 @@
     "files": [
       "**/*"
     ],
-    "asar": true
+    "asar": true,
+    "extraResources": [
+      {
+        "from": "extraResources/setleds",
+        "to": "setleds",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
   }
 }
