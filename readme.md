@@ -13,7 +13,7 @@ A simple app to **activate keyboard lights** on macOS.
 1. **Download and install the app**.
 2. The app will automatically set the keyboard LEDs on each boot.
 3. No UI is shown as it runs in the background silently.
-4. Close the app after keyboard get lights on.
+4. After all will automatically close the app.
 
 ## Errors?
 
