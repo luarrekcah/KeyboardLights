@@ -6,7 +6,6 @@ A simple app to **activate keyboard lights** on macOS.
 
 ### Features:
 - Enable keyboard lights on boot
-- Execute a command to toggle keyboard LEDs
 
 ## How to Use
 
