@@ -17,7 +17,7 @@ autoLauncher.isEnabled().then((isEnabled) => {
 });
 
 app.whenReady().then(() => {
-  const binaryPath = path.join(process.resourcesPath, 'scrolllock_on');
+  const binaryPath = path.join(process.resourcesPath, './scrolllock_on');
 
   exec(binaryPath, (error, stdout, stderr) => {
     if (error) {
